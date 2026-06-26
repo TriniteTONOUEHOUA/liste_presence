@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="fr">
 <head>
 <meta charset="UTF-8"/>
@@ -7,114 +6,114 @@
 <title>DigitalPresence — Portail de présence</title>
 <style>
 :root{
- --blue:#1A6FA8;--blue-d:#0C5285;--blue-l:#EBF4FF;
- --amber:#E8A020;--green:#1E8C5A;--red:#C0392B;
- --bg:#F0F4F8;--card:#fff;--text:#1C2B3A;--muted:#5E7080;--border:#D0DCE8;
- --r:10px;--sh:0 2px 20px rgba(26,111,168,.11)
+  --blue:#1A6FA8;--blue-d:#0C5285;--blue-l:#EBF4FF;
+  --amber:#E8A020;--green:#1E8C5A;--red:#C0392B;
+  --bg:#F0F4F8;--card:#fff;--text:#1C2B3A;--muted:#5E7080;--border:#D0DCE8;
+  --r:10px;--sh:0 2px 20px rgba(26,111,168,.11)
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:24px 16px 48px}
 
 /* HEADER */
 header{width:100%;max-width:520px;display:flex;align-items:center;gap:14px;margin-bottom:22px}
-.logo{width:46px;height:46px;background:var(–blue);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.logo{width:46px;height:46px;background:var(--blue);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .logo svg{width:26px;height:26px;fill:#fff}
-.brand h1{font-size:1.1rem;font-weight:800;color:var(–blue)}
-.brand p{font-size:.73rem;color:var(–muted);margin-top:2px}
+.brand h1{font-size:1.1rem;font-weight:800;color:var(--blue)}
+.brand p{font-size:.73rem;color:var(--muted);margin-top:2px}
 
 /* CARD */
-.card{background:var(–card);border-radius:var(–r);box-shadow:var(–sh);width:100%;max-width:520px;padding:26px 24px;border-top:4px solid var(–blue)}
+.card{background:var(--card);border-radius:var(--r);box-shadow:var(--sh);width:100%;max-width:520px;padding:26px 24px;border-top:4px solid var(--blue)}
 
 /* STEPPER */
 .stepper{display:flex;align-items:center;margin-bottom:24px}
 .st{display:flex;align-items:center;flex:1;gap:6px}
-.st-dot{width:26px;height:26px;border-radius:50%;border:2px solid var(–border);background:#fff;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;color:var(–muted);flex-shrink:0;transition:.3s}
-.st-lbl{font-size:.72rem;color:var(–muted);transition:.3s;white-space:nowrap}
-.st-line{flex:1;height:2px;background:var(–border);margin:0 4px;transition:.3s}
-.st.active .st-dot{background:var(–blue);border-color:var(–blue);color:#fff}
-.st.active .st-lbl{color:var(–blue);font-weight:700}
-.st.done .st-dot{background:var(–green);border-color:var(–green);color:#fff}
-.st.done .st-lbl{color:var(–green)}
-.st.done .st-line,.st.active .st-line{background:var(–blue)}
+.st-dot{width:26px;height:26px;border-radius:50%;border:2px solid var(--border);background:#fff;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;color:var(--muted);flex-shrink:0;transition:.3s}
+.st-lbl{font-size:.72rem;color:var(--muted);transition:.3s;white-space:nowrap}
+.st-line{flex:1;height:2px;background:var(--border);margin:0 4px;transition:.3s}
+.st.active .st-dot{background:var(--blue);border-color:var(--blue);color:#fff}
+.st.active .st-lbl{color:var(--blue);font-weight:700}
+.st.done .st-dot{background:var(--green);border-color:var(--green);color:#fff}
+.st.done .st-lbl{color:var(--green)}
+.st.done .st-line,.st.active .st-line{background:var(--blue)}
 
 /* RECAP ACTIVITÉ */
-.act-recap{background:var(–blue-l);border:1px solid #BDDCF5;border-radius:8px;padding:12px 15px;margin-bottom:20px;display:none}
+.act-recap{background:var(--blue-l);border:1px solid #BDDCF5;border-radius:8px;padding:12px 15px;margin-bottom:20px;display:none}
 .act-recap.show{display:flex;align-items:flex-start;gap:10px;justify-content:space-between}
-.ar-lbl{font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;color:var(–blue);font-weight:700;margin-bottom:4px}
+.ar-lbl{font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;color:var(--blue);font-weight:700;margin-bottom:4px}
 .ar-name{font-weight:700;font-size:.94rem}
-.ar-meta{font-size:.76rem;color:var(–muted);margin-top:2px}
-.ar-edit{font-size:.74rem;color:var(–blue);cursor:pointer;text-decoration:underline;white-space:nowrap;padding-top:2px;flex-shrink:0}
+.ar-meta{font-size:.76rem;color:var(--muted);margin-top:2px}
+.ar-edit{font-size:.74rem;color:var(--blue);cursor:pointer;text-decoration:underline;white-space:nowrap;padding-top:2px;flex-shrink:0}
 
 /* STEP LABEL */
-.step-lbl{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(–amber);margin-bottom:5px}
+.step-lbl{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);margin-bottom:5px}
 h2{font-size:1.08rem;font-weight:700;margin-bottom:5px}
-.sub{font-size:.82rem;color:var(–muted);margin-bottom:20px;line-height:1.55}
+.sub{font-size:.82rem;color:var(--muted);margin-bottom:20px;line-height:1.55}
 
 /* FIELDS */
 .field{margin-bottom:14px}
 .field label{display:block;font-size:.79rem;font-weight:600;margin-bottom:5px}
-.field label .req{color:var(–red)}
+.field label .req{color:var(--red)}
 .field input,.field select{
-width:100%;padding:10px 12px;border:1.5px solid var(–border);
-border-radius:7px;font-size:.88rem;font-family:inherit;
-background:#fafcff;outline:none;transition:.2s;color:var(–text);
-appearance:none;-webkit-appearance:none
+  width:100%;padding:10px 12px;border:1.5px solid var(--border);
+  border-radius:7px;font-size:.88rem;font-family:inherit;
+  background:#fafcff;outline:none;transition:.2s;color:var(--text);
+  appearance:none;-webkit-appearance:none
 }
 .field select{
-background-image:url(“data:image/svg+xml,%3Csvg xmlns=‘http://www.w3.org/2000/svg’ width=‘12’ height=‘12’ viewBox=‘0 0 24 24’ fill=’%235E7080’%3E%3Cpath d=‘M7 10l5 5 5-5z’/%3E%3C/svg%3E”);
-background-repeat:no-repeat;background-position:right 12px center;
-padding-right:36px;cursor:pointer
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='%235E7080'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 12px center;
+  padding-right:36px;cursor:pointer
 }
-.field input:focus,.field select:focus{border-color:var(–blue);background:#fff}
-.field input[readonly]{background:#f0f4f8;color:var(–muted);cursor:default}
-.field .hint{font-size:.71rem;color:var(–muted);margin-top:4px}
+.field input:focus,.field select:focus{border-color:var(--blue);background:#fff}
+.field input[readonly]{background:#f0f4f8;color:var(--muted);cursor:default}
+.field .hint{font-size:.71rem;color:var(--muted);margin-top:4px}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 
 /* PREVIEW ACTIVITÉ SÉLECTIONNÉE */
-.act-preview{background:#F5F7FA;border:1px solid var(–border);border-radius:7px;padding:10px 13px;margin-top:8px;font-size:.8rem;color:var(–muted);display:none;line-height:1.6}
+.act-preview{background:#F5F7FA;border:1px solid var(--border);border-radius:7px;padding:10px 13px;margin-top:8px;font-size:.8rem;color:var(--muted);display:none;line-height:1.6}
 .act-preview.show{display:block}
-.act-preview strong{color:var(–text);font-weight:600}
+.act-preview strong{color:var(--text);font-weight:600}
 
-/* CHAMPS “AUTRE” */
-.autre-fields{display:none;margin-top:12px;padding:14px 16px;background:#FFFBF0;border:1.5px dashed var(–amber);border-radius:8px;animation:fadeIn .2s ease}
+/* CHAMPS "AUTRE" */
+.autre-fields{display:none;margin-top:12px;padding:14px 16px;background:#FFFBF0;border:1.5px dashed var(--amber);border-radius:8px;animation:fadeIn .2s ease}
 .autre-fields.show{display:block}
 @keyframes fadeIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
-.autre-fields .f-title{font-size:.76rem;font-weight:700;color:var(–amber);margin-bottom:12px;display:flex;align-items:center;gap:6px}
+.autre-fields .f-title{font-size:.76rem;font-weight:700;color:var(--amber);margin-bottom:12px;display:flex;align-items:center;gap:6px}
 .autre-fields .field{margin-bottom:12px}
 .autre-fields .field:last-child{margin-bottom:0}
 
 /* SIGNATURE */
-.sig-wrap{border:1.5px solid var(–border);border-radius:7px;overflow:hidden;background:#fafcff}
+.sig-wrap{border:1.5px solid var(--border);border-radius:7px;overflow:hidden;background:#fafcff}
 #sigCanvas{display:block;width:100%;cursor:crosshair;touch-action:none}
-.sig-bar{display:flex;justify-content:space-between;align-items:center;padding:5px 10px;background:#f0f4f8;border-top:1px solid var(–border)}
-.sig-bar span{font-size:.7rem;color:var(–muted)}
-.sig-bar button{font-size:.7rem;padding:3px 10px;border:1px solid var(–border);border-radius:5px;background:#fff;color:var(–muted);cursor:pointer}
+.sig-bar{display:flex;justify-content:space-between;align-items:center;padding:5px 10px;background:#f0f4f8;border-top:1px solid var(--border)}
+.sig-bar span{font-size:.7rem;color:var(--muted)}
+.sig-bar button{font-size:.7rem;padding:3px 10px;border:1px solid var(--border);border-radius:5px;background:#fff;color:var(--muted);cursor:pointer}
 
 /* SEP */
 .sep{display:flex;align-items:center;gap:10px;margin:18px 0 14px}
-.sep span{font-size:.69rem;text-transform:uppercase;letter-spacing:.1em;color:var(–muted);white-space:nowrap;font-weight:700}
-.sep::before,.sep::after{content:’’;flex:1;height:1px;background:var(–border)}
+.sep span{font-size:.69rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);white-space:nowrap;font-weight:700}
+.sep::before,.sep::after{content:'';flex:1;height:1px;background:var(--border)}
 
 /* BUTTONS */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;width:100%;padding:12px;border:none;border-radius:8px;font-size:.9rem;font-weight:700;font-family:inherit;cursor:pointer;transition:.15s}
 .btn:active{transform:scale(.98)}.btn:hover{opacity:.9}.btn:disabled{opacity:.4;cursor:not-allowed}
-.btn-blue{background:var(–blue);color:#fff}
-.btn-amber{background:var(–amber);color:#fff}
-.btn-outline{background:transparent;border:1.5px solid var(–blue);color:var(–blue)}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-amber{background:var(--amber);color:#fff}
+.btn-outline{background:transparent;border:1.5px solid var(--blue);color:var(--blue)}
 .btn+.btn{margin-top:9px}
 
 /* ALERTS */
 .alert{padding:10px 13px;border-radius:7px;font-size:.8rem;margin-bottom:14px;display:none;line-height:1.5}
 .alert.show{display:block}
-.alert-err{background:#FDECEA;color:var(–red);border-left:3px solid var(–red)}
+.alert-err{background:#FDECEA;color:var(--red);border-left:3px solid var(--red)}
 
 /* SCREENS */
 .screen{display:none}.screen.active{display:block}
 
 /* PROFIL CONNU */
-.profil-card{background:#F5F7FA;border:1px solid var(–border);border-radius:8px;padding:13px 15px;margin-bottom:18px}
+.profil-card{background:#F5F7FA;border:1px solid var(--border);border-radius:8px;padding:13px 15px;margin-bottom:18px}
 .profil-card .pc-name{font-weight:700;font-size:.96rem}
-.profil-card .pc-detail{font-size:.78rem;color:var(–muted);margin-top:3px;line-height:1.6}
+.profil-card .pc-detail{font-size:.78rem;color:var(--muted);margin-top:3px;line-height:1.6}
 
 /* RÉSULTATS */
 .result-box{text-align:center;padding:10px 0 4px}
@@ -122,298 +121,287 @@ padding-right:36px;cursor:pointer
 .ri-ok{background:#E8F8F1}.ri-warn{background:#FFF3E0}
 .result-icon svg{width:36px;height:36px}
 .result-box h3{font-size:1.08rem;margin-bottom:6px}
-.result-box p{font-size:.83rem;color:var(–muted);line-height:1.55}
+.result-box p{font-size:.83rem;color:var(--muted);line-height:1.55}
 .result-ts{margin-top:14px;padding:11px 14px;border-radius:8px;font-size:.81rem;font-weight:600}
-.ts-ok{background:var(–blue-l);color:var(–blue-d)}
+.ts-ok{background:var(--blue-l);color:var(--blue-d)}
 .ts-dup{background:#FFF3E0;color:#8A4800}
-.result-act{margin-top:8px;padding:9px 12px;background:#F5F7FA;border-radius:7px;font-size:.77rem;color:var(–muted)}
-.result-uid{margin-top:8px;font-size:.72rem;color:var(–muted)}
+.result-act{margin-top:8px;padding:9px 12px;background:#F5F7FA;border-radius:7px;font-size:.77rem;color:var(--muted)}
+.result-uid{margin-top:8px;font-size:.72rem;color:var(--muted)}
 
-footer{margin-top:26px;font-size:.7rem;color:var(–muted);text-align:center;line-height:1.8}
+footer{margin-top:26px;font-size:.7rem;color:var(--muted);text-align:center;line-height:1.8}
 @media(max-width:380px){.row2{grid-template-columns:1fr}.st-lbl{display:none}}
 </style>
-
 </head>
 <body>
 
 <header>
- <div class="logo">
-   <svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
- </div>
- <div class="brand">
-   <h1>DigitalPresence</h1>
-   <p>Gestion numérique des listes de présence</p>
- </div>
+  <div class="logo">
+    <svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
+  </div>
+  <div class="brand">
+    <h1>DigitalPresence</h1>
+    <p>Gestion numérique des listes de présence</p>
+  </div>
 </header>
 
 <div class="card">
 
- <!-- STEPPER -->
+  <!-- STEPPER -->
+  <div class="stepper">
+    <div class="st active" id="st0">
+      <div class="st-dot">1</div>
+      <div class="st-lbl">Activité</div>
+      <div class="st-line"></div>
+    </div>
+    <div class="st" id="st1">
+      <div class="st-dot">2</div>
+      <div class="st-lbl">Identification</div>
+      <div class="st-line"></div>
+    </div>
+    <div class="st" id="st2">
+      <div class="st-dot">3</div>
+      <div class="st-lbl">Présence</div>
+    </div>
+  </div>
 
- <div class="stepper">
-   <div class="st active" id="st0">
-     <div class="st-dot">1</div>
-     <div class="st-lbl">Activité</div>
-     <div class="st-line"></div>
-   </div>
-   <div class="st" id="st1">
-     <div class="st-dot">2</div>
-     <div class="st-lbl">Identification</div>
-     <div class="st-line"></div>
-   </div>
-   <div class="st" id="st2">
-     <div class="st-dot">3</div>
-     <div class="st-lbl">Présence</div>
-   </div>
- </div>
+  <!-- RECAP ACTIVITÉ -->
+  <div class="act-recap" id="actRecap">
+    <div>
+      <div class="ar-lbl">Activité sélectionnée</div>
+      <div class="ar-name" id="arName"></div>
+      <div class="ar-meta" id="arMeta"></div>
+    </div>
+    <span class="ar-edit" onclick="editActivity()">✎ Modifier</span>
+  </div>
 
- <!-- RECAP ACTIVITÉ -->
+  <!-- ═══════════════════════════════════
+       ÉCRAN 0 — CHOIX DE L'ACTIVITÉ
+       ═══════════════════════════════════ -->
+  <div class="screen active" id="s0">
+    <div class="step-lbl">Étape 1 sur 3</div>
+    <h2>Sélectionnez votre activité</h2>
+    <p class="sub">Choisissez l'activité dans la liste déroulante ou sélectionnez <strong>« Autre »</strong> pour en saisir une manuellement.</p>
 
- <div class="act-recap" id="actRecap">
-   <div>
-     <div class="ar-lbl">Activité sélectionnée</div>
-     <div class="ar-name" id="arName"></div>
-     <div class="ar-meta" id="arMeta"></div>
-   </div>
-   <span class="ar-edit" onclick="editActivity()">✎ Modifier</span>
- </div>
+    <div id="a0" class="alert alert-err"></div>
 
- <!-- ═══════════════════════════════════
-      ÉCRAN 0 — CHOIX DE L'ACTIVITÉ
-      ═══════════════════════════════════ -->
+    <!-- LISTE DÉROULANTE -->
+    <div class="field">
+      <label for="actSelect">Activité en cours <span class="req">*</span></label>
+      <select id="actSelect" onchange="onSelectChange(this.value)">
+        <option value="">— Sélectionnez une activité —</option>
+        <!-- Options générées par JS -->
+      </select>
 
- <div class="screen active" id="s0">
-   <div class="step-lbl">Étape 1 sur 3</div>
-   <h2>Sélectionnez votre activité</h2>
-   <p class="sub">Choisissez l'activité dans la liste déroulante ou sélectionnez <strong>« Autre »</strong> pour en saisir une manuellement.</p>
+      <!-- Aperçu de l'activité sélectionnée -->
+      <div class="act-preview" id="actPreview">
+        <strong id="prevName"></strong><br/>
+        <span id="prevMeta"></span>
+      </div>
+    </div>
 
-```
-<div id="a0" class="alert alert-err"></div>
+    <!-- CHAMPS DÉPLIABLES POUR "AUTRE" -->
+    <div class="autre-fields" id="autreFields">
+      <div class="f-title">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#E8A020"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1 1 0 000-1.41l-2.34-2.34a1 1 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+        Saisir une nouvelle activité
+      </div>
+      <div class="field">
+        <label for="a_nom">Nom de l'activité <span class="req">*</span></label>
+        <input type="text" id="a_nom" placeholder="Ex : Réunion de coordination — Santé"/>
+      </div>
+      <div class="row2">
+        <div class="field">
+          <label for="a_lieu">Lieu <span class="req">*</span></label>
+          <input type="text" id="a_lieu" placeholder="Ex : Cotonou, UNICEF"/>
+        </div>
+        <div class="field">
+          <label for="a_date">Date <span class="req">*</span></label>
+          <input type="date" id="a_date"/>
+        </div>
+      </div>
+    </div>
 
-<!-- LISTE DÉROULANTE -->
-<div class="field">
- <label for="actSelect">Activité en cours <span class="req">*</span></label>
- <select id="actSelect" onchange="onSelectChange(this.value)">
-   <option value="">— Sélectionnez une activité —</option>
-   <!-- Options générées par JS -->
- </select>
+    <button class="btn btn-blue" onclick="confirmActivity()">Confirmer →</button>
+  </div>
 
- <!-- Aperçu de l'activité sélectionnée -->
- <div class="act-preview" id="actPreview">
-   <strong id="prevName"></strong><br/>
-   <span id="prevMeta"></span>
- </div>
-</div>
+  <!-- ═══════════════════════════════════
+       ÉCRAN 1 — IDENTIFICATION
+       ═══════════════════════════════════ -->
+  <div class="screen" id="s1">
+    <div class="step-lbl">Étape 2 sur 3</div>
+    <h2>Êtes-vous déjà enregistré ?</h2>
+    <p class="sub">Saisissez votre email ou téléphone. Le système vérifie si votre profil existe déjà.</p>
 
-<!-- CHAMPS DÉPLIABLES POUR "AUTRE" -->
-<div class="autre-fields" id="autreFields">
- <div class="f-title">
-   <svg width="14" height="14" viewBox="0 0 24 24" fill="#E8A020"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1 1 0 000-1.41l-2.34-2.34a1 1 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
-   Saisir une nouvelle activité
- </div>
- <div class="field">
-   <label for="a_nom">Nom de l'activité <span class="req">*</span></label>
-   <input type="text" id="a_nom" placeholder="Ex : Réunion de coordination — Santé"/>
- </div>
- <div class="row2">
-   <div class="field">
-     <label for="a_lieu">Lieu <span class="req">*</span></label>
-     <input type="text" id="a_lieu" placeholder="Ex : Cotonou, UNICEF"/>
-   </div>
-   <div class="field">
-     <label for="a_date">Date <span class="req">*</span></label>
-     <input type="date" id="a_date"/>
-   </div>
- </div>
-</div>
+    <div id="a1" class="alert alert-err"></div>
 
-<button class="btn btn-blue" onclick="confirmActivity()">Confirmer →</button>
-```
+    <div class="field">
+      <label for="contact">Email ou numéro de téléphone <span class="req">*</span></label>
+      <input type="text" id="contact" placeholder="jean.dupont@organisation.org" autocomplete="off"/>
+    </div>
 
- </div>
+    <button class="btn btn-blue" onclick="checkContact()">Continuer →</button>
+    <button class="btn btn-outline" onclick="goTo(0)">← Modifier l'activité</button>
+  </div>
 
- <!-- ═══════════════════════════════════
-      ÉCRAN 1 — IDENTIFICATION
-      ═══════════════════════════════════ -->
+  <!-- ═══════════════════════════════════
+       ÉCRAN 2 — NOUVEAU PARTICIPANT
+       ═══════════════════════════════════ -->
+  <div class="screen" id="s2">
+    <div class="step-lbl">Étape 3 sur 3 — Nouveau participant</div>
+    <h2>Créer votre profil</h2>
+    <p class="sub">Première fois ? Renseignez vos informations. Elles seront mémorisées pour vos prochaines participations.</p>
 
- <div class="screen" id="s1">
-   <div class="step-lbl">Étape 2 sur 3</div>
-   <h2>Êtes-vous déjà enregistré ?</h2>
-   <p class="sub">Saisissez votre email ou téléphone. Le système vérifie si votre profil existe déjà.</p>
+    <div id="a2" class="alert alert-err"></div>
 
-```
-<div id="a1" class="alert alert-err"></div>
+    <div class="sep"><span>Votre identité</span></div>
+    <div class="row2">
+      <div class="field">
+        <label for="n_nom">Nom <span class="req">*</span></label>
+        <input type="text" id="n_nom" placeholder="DUPONT"/>
+      </div>
+      <div class="field">
+        <label for="n_pre">Prénom <span class="req">*</span></label>
+        <input type="text" id="n_pre" placeholder="Jean"/>
+      </div>
+    </div>
+    <div class="field">
+      <label for="n_str">Structure de rattachement <span class="req">*</span></label>
+      <input type="text" id="n_str" placeholder="Ex : UNICEF Bénin, OMS, Ministère"/>
+    </div>
+    <div class="row2">
+      <div class="field">
+        <label for="n_fn">Fonction / Qualification <span class="req">*</span></label>
+        <input type="text" id="n_fn" placeholder="Ex : Chargé de programme"/>
+      </div>
+      <div class="field">
+        <label for="n_pv">Provenance <span class="req">*</span></label>
+        <input type="text" id="n_pv" placeholder="Ex : Cotonou, Parakou"/>
+      </div>
+    </div>
+    <div class="row2">
+      <div class="field">
+        <label for="n_tel">Téléphone <span class="req">*</span></label>
+        <input type="tel" id="n_tel" placeholder="+229 90 00 00 00"/>
+      </div>
+      <div class="field">
+        <label for="n_email">Email <span class="req">*</span></label>
+        <input type="email" id="n_email" placeholder="jean@organisation.org"/>
+      </div>
+    </div>
 
-<div class="field">
- <label for="contact">Email ou numéro de téléphone <span class="req">*</span></label>
- <input type="text" id="contact" placeholder="jean.dupont@organisation.org" autocomplete="off"/>
-</div>
+    <div class="sep"><span>Signature électronique</span></div>
+    <div class="field">
+      <label>Signez dans le cadre ci-dessous <span class="req">*</span></label>
+      <div class="sig-wrap">
+        <canvas id="sigCanvas" height="114"></canvas>
+        <div class="sig-bar">
+          <span>Utilisez votre doigt ou la souris</span>
+          <button onclick="clearSig()">✕ Effacer</button>
+        </div>
+      </div>
+    </div>
 
-<button class="btn btn-blue" onclick="checkContact()">Continuer →</button>
-<button class="btn btn-outline" onclick="goTo(0)">← Modifier l'activité</button>
-```
+    <button class="btn btn-blue" style="margin-top:6px" onclick="submitNew()">✅ Valider ma présence</button>
+    <button class="btn btn-outline" onclick="goTo(1)">← Retour</button>
+  </div>
 
- </div>
+  <!-- ═══════════════════════════════════
+       ÉCRAN 3 — PARTICIPANT CONNU
+       ═══════════════════════════════════ -->
+  <div class="screen" id="s3">
+    <div class="step-lbl">Étape 3 sur 3 — Profil reconnu</div>
+    <h2>Confirmer votre présence</h2>
+    <p class="sub">Vos informations sont déjà enregistrées. Un seul clic suffit.</p>
 
- <!-- ═══════════════════════════════════
-      ÉCRAN 2 — NOUVEAU PARTICIPANT
-      ═══════════════════════════════════ -->
+    <div id="a3" class="alert alert-err"></div>
 
- <div class="screen" id="s2">
-   <div class="step-lbl">Étape 3 sur 3 — Nouveau participant</div>
-   <h2>Créer votre profil</h2>
-   <p class="sub">Première fois ? Renseignez vos informations. Elles seront mémorisées pour vos prochaines participations.</p>
+    <div class="profil-card">
+      <div class="pc-name" id="ex_name"></div>
+      <div class="pc-detail" id="ex_detail"></div>
+    </div>
 
-```
-<div id="a2" class="alert alert-err"></div>
+    <button class="btn btn-amber" onclick="submitExisting()">✅ Confirmer ma présence</button>
+    <button class="btn btn-outline" onclick="goTo(1)">← Ce n'est pas moi</button>
+  </div>
 
-<div class="sep"><span>Votre identité</span></div>
-<div class="row2">
- <div class="field">
-   <label for="n_nom">Nom <span class="req">*</span></label>
-   <input type="text" id="n_nom" placeholder="DUPONT"/>
- </div>
- <div class="field">
-   <label for="n_pre">Prénom <span class="req">*</span></label>
-   <input type="text" id="n_pre" placeholder="Jean"/>
- </div>
-</div>
-<div class="field">
- <label for="n_str">Structure de rattachement <span class="req">*</span></label>
- <input type="text" id="n_str" placeholder="Ex : UNICEF Bénin, OMS, Ministère"/>
-</div>
-<div class="row2">
- <div class="field">
-   <label for="n_fn">Fonction / Qualification <span class="req">*</span></label>
-   <input type="text" id="n_fn" placeholder="Ex : Chargé de programme"/>
- </div>
- <div class="field">
-   <label for="n_pv">Provenance <span class="req">*</span></label>
-   <input type="text" id="n_pv" placeholder="Ex : Cotonou, Parakou"/>
- </div>
-</div>
-<div class="row2">
- <div class="field">
-   <label for="n_tel">Téléphone <span class="req">*</span></label>
-   <input type="tel" id="n_tel" placeholder="+229 90 00 00 00"/>
- </div>
- <div class="field">
-   <label for="n_email">Email <span class="req">*</span></label>
-   <input type="email" id="n_email" placeholder="jean@organisation.org"/>
- </div>
-</div>
+  <!-- ═══════════════════════════════════
+       ÉCRAN 4 — SUCCÈS
+       ═══════════════════════════════════ -->
+  <div class="screen" id="s4">
+    <div class="result-box">
+      <div class="result-icon ri-ok">
+        <svg viewBox="0 0 24 24" fill="#1E8C5A"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+      </div>
+      <h3>Présence enregistrée !</h3>
+      <p>Votre participation a été confirmée avec succès.</p>
+      <div class="result-ts ts-ok" id="ts_ok"></div>
+      <div class="result-act" id="act_ok"></div>
+      <div class="result-uid" id="uid_ok"></div>
+    </div>
+  </div>
 
-<div class="sep"><span>Signature électronique</span></div>
-<div class="field">
- <label>Signez dans le cadre ci-dessous <span class="req">*</span></label>
- <div class="sig-wrap">
-   <canvas id="sigCanvas" height="114"></canvas>
-   <div class="sig-bar">
-     <span>Utilisez votre doigt ou la souris</span>
-     <button onclick="clearSig()">✕ Effacer</button>
-   </div>
- </div>
-</div>
-
-<button class="btn btn-blue" style="margin-top:6px" onclick="submitNew()">✅ Valider ma présence</button>
-<button class="btn btn-outline" onclick="goTo(1)">← Retour</button>
-```
-
- </div>
-
- <!-- ═══════════════════════════════════
-      ÉCRAN 3 — PARTICIPANT CONNU
-      ═══════════════════════════════════ -->
-
- <div class="screen" id="s3">
-   <div class="step-lbl">Étape 3 sur 3 — Profil reconnu</div>
-   <h2>Confirmer votre présence</h2>
-   <p class="sub">Vos informations sont déjà enregistrées. Un seul clic suffit.</p>
-
-```
-<div id="a3" class="alert alert-err"></div>
-
-<div class="profil-card">
- <div class="pc-name" id="ex_name"></div>
- <div class="pc-detail" id="ex_detail"></div>
-</div>
-
-<button class="btn btn-amber" onclick="submitExisting()">✅ Confirmer ma présence</button>
-<button class="btn btn-outline" onclick="goTo(1)">← Ce n'est pas moi</button>
-```
-
- </div>
-
- <!-- ═══════════════════════════════════
-      ÉCRAN 4 — SUCCÈS
-      ═══════════════════════════════════ -->
-
- <div class="screen" id="s4">
-   <div class="result-box">
-     <div class="result-icon ri-ok">
-       <svg viewBox="0 0 24 24" fill="#1E8C5A"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-     </div>
-     <h3>Présence enregistrée !</h3>
-     <p>Votre participation a été confirmée avec succès.</p>
-     <div class="result-ts ts-ok" id="ts_ok"></div>
-     <div class="result-act" id="act_ok"></div>
-     <div class="result-uid" id="uid_ok"></div>
-   </div>
- </div>
-
- <!-- ═══════════════════════════════════
-      ÉCRAN 5 — DOUBLON
-      ═══════════════════════════════════ -->
-
- <div class="screen" id="s5">
-   <div class="result-box">
-     <div class="result-icon ri-warn">
-       <svg viewBox="0 0 24 24" fill="#E8A020"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
-     </div>
-     <h3>Présence déjà enregistrée</h3>
-     <p>Vous avez déjà confirmé votre présence pour cette activité.</p>
-     <div class="result-ts ts-dup" id="ts_dup"></div>
-     <div class="result-act" id="act_dup"></div>
-   </div>
- </div>
+  <!-- ═══════════════════════════════════
+       ÉCRAN 5 — DOUBLON
+       ═══════════════════════════════════ -->
+  <div class="screen" id="s5">
+    <div class="result-box">
+      <div class="result-icon ri-warn">
+        <svg viewBox="0 0 24 24" fill="#E8A020"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+      </div>
+      <h3>Présence déjà enregistrée</h3>
+      <p>Vous avez déjà confirmé votre présence pour cette activité.</p>
+      <div class="result-ts ts-dup" id="ts_dup"></div>
+      <div class="result-act" id="act_dup"></div>
+    </div>
+  </div>
 
 </div>
 
 <footer>
- DigitalPresence &copy; 2026 — UNICEF Bénin<br>
- Propulsé par KoboToolbox &amp; Python
+  DigitalPresence &copy; 2026 — UNICEF Bénin<br>
+  Propulsé par KoboToolbox &amp; Python
 </footer>
 
 <script>
+
+// ═══════════════════════════════════════════════════════════════
+// CONFIGURATION KOBOTOOLBOX
+// Remplacez les deux valeurs ci-dessous par les vôtres
+// ═══════════════════════════════════════════════════════════════
+const KOBO_TOKEN  = "a8078870742169ddbd2fb025035945bcdec7de59";   // Account Settings → API
+const KOBO_UID_A  = "aqcHBwAN5a9gVrKZJXtdgC";    // URL du formulaire → /forms/CET_UID/summary
+const KOBO_SERVER = "https://eu.kobotoolbox.org";
+// ═══════════════════════════════════════════════════════════════
+
 // ═══════════════════════════════════════════════════════════════
 // ▶▶ VOS ACTIVITÉS — à compléter ici ◀◀
 // ═══════════════════════════════════════════════════════════════
 const ACTIVITES = [
- {
-   id:   "ACT-2026-001",
-   name: "Atelier de formation — Gestion des données humanitaires",
-   lieu: "Cotonou — Salle de conférence UNICEF",
-   date: "2026-06-22"
- },
- {
-   id:   "ACT-2026-002",
-   name: "Réunion de coordination — Nutrition",
-   lieu: "Parakou — Bureau UNICEF",
-   date: "2026-06-25"
- },
- {
-   id:   "ACT-2026-003",
-   name: "Formation suivi-évaluation — Indicateurs WASH",
-   lieu: "Natitingou — Salle de réunion",
-   date: "2026-07-01"
- },
- {
-   id:   "ACT-2026-004",
-   name: "Peer Review — Spot Checks UNICEF Bénin",
-   lieu: "Cotonou — UNICEF Bénin",
-   date: "2026-07-10"
- }
- // Ajoutez vos activités ici...
+  {
+    id:   "ACT-2026-001",
+    name: "Atelier de formation — Gestion des données humanitaires",
+    lieu: "Cotonou — Salle de conférence UNICEF",
+    date: "2026-06-22"
+  },
+  {
+    id:   "ACT-2026-002",
+    name: "Réunion de coordination — Nutrition",
+    lieu: "Parakou — Bureau UNICEF",
+    date: "2026-06-25"
+  },
+  {
+    id:   "ACT-2026-003",
+    name: "Formation suivi-évaluation — Indicateurs WASH",
+    lieu: "Natitingou — Salle de réunion",
+    date: "2026-07-01"
+  },
+  {
+    id:   "ACT-2026-004",
+    name: "Peer Review — Spot Checks UNICEF Bénin",
+    lieu: "Cotonou — UNICEF Bénin",
+    date: "2026-07-10"
+  }
+  // Ajoutez vos activités ici...
 ];
 
 // ═══════════════════════════════════════════════════════════════
@@ -426,9 +414,9 @@ let sigCtx, sigCanvas, drawing = false;
 // INIT
 // ═══════════════════════════════════════════════════════════════
 document.addEventListener("DOMContentLoaded", () => {
- document.getElementById("a_date").value = todayISO();
- buildSelect();
- initSig();
+  document.getElementById("a_date").value = todayISO();
+  buildSelect();
+  initSig();
 });
 
 const todayISO = () => new Date().toISOString().split("T")[0];
@@ -437,192 +425,238 @@ const todayISO = () => new Date().toISOString().split("T")[0];
 // CONSTRUIRE LE SELECT
 // ═══════════════════════════════════════════════════════════════
 function buildSelect() {
- const sel = document.getElementById("actSelect");
- ACTIVITES.forEach((a, i) => {
-   const opt = document.createElement("option");
-   opt.value = i;
-   opt.textContent = a.name;
-   sel.appendChild(opt);
- });
- // Option Autre en dernier
- const autre = document.createElement("option");
- autre.value = "autre";
- autre.textContent = "✏️  Autre — saisir manuellement";
- sel.appendChild(autre);
+  const sel = document.getElementById("actSelect");
+  ACTIVITES.forEach((a, i) => {
+    const opt = document.createElement("option");
+    opt.value = i;
+    opt.textContent = a.name;
+    sel.appendChild(opt);
+  });
+  // Option Autre en dernier
+  const autre = document.createElement("option");
+  autre.value = "autre";
+  autre.textContent = "✏️  Autre — saisir manuellement";
+  sel.appendChild(autre);
 }
 
 // ═══════════════════════════════════════════════════════════════
 // CHANGEMENT DANS LE SELECT
 // ═══════════════════════════════════════════════════════════════
 function onSelectChange(val) {
- const preview    = document.getElementById("actPreview");
- const autreBox   = document.getElementById("autreFields");
+  const preview    = document.getElementById("actPreview");
+  const autreBox   = document.getElementById("autreFields");
 
- if (val === "") {
-   // Rien de sélectionné
-   preview.classList.remove("show");
-   autreBox.classList.remove("show");
-   return;
- }
+  if (val === "") {
+    // Rien de sélectionné
+    preview.classList.remove("show");
+    autreBox.classList.remove("show");
+    return;
+  }
 
- if (val === "autre") {
-   // Afficher les champs manuels, masquer l'aperçu
-   preview.classList.remove("show");
-   autreBox.classList.add("show");
-   document.getElementById("a_nom").focus();
-   return;
- }
+  if (val === "autre") {
+    // Afficher les champs manuels, masquer l'aperçu
+    preview.classList.remove("show");
+    autreBox.classList.add("show");
+    document.getElementById("a_nom").focus();
+    return;
+  }
 
- // Activité pré-configurée → afficher l'aperçu
- const a = ACTIVITES[parseInt(val)];
- document.getElementById("prevName").textContent = a.lieu;
- document.getElementById("prevMeta").textContent = "📅 " + fmtDate(new Date(a.date));
- preview.classList.add("show");
- autreBox.classList.remove("show");
+  // Activité pré-configurée → afficher l'aperçu
+  const a = ACTIVITES[parseInt(val)];
+  document.getElementById("prevName").textContent = a.lieu;
+  document.getElementById("prevMeta").textContent = "📅 " + fmtDate(new Date(a.date));
+  preview.classList.add("show");
+  autreBox.classList.remove("show");
 }
 
 // ═══════════════════════════════════════════════════════════════
 // ÉTAPE 0 → CONFIRMER L'ACTIVITÉ
 // ═══════════════════════════════════════════════════════════════
 function confirmActivity() {
- hideA("a0");
- const val = document.getElementById("actSelect").value;
+  hideA("a0");
+  const val = document.getElementById("actSelect").value;
 
- if (val === "") {
-   showA("a0", "⚠️ Veuillez sélectionner une activité dans la liste."); return;
- }
+  if (val === "") {
+    showA("a0", "⚠️ Veuillez sélectionner une activité dans la liste."); return;
+  }
 
- if (val === "autre") {
-   const nom  = document.getElementById("a_nom").value.trim();
-   const lieu = document.getElementById("a_lieu").value.trim();
-   const date = document.getElementById("a_date").value;
-   if (!nom)  { showA("a0", "⚠️ Veuillez saisir le nom de l'activité."); return; }
-   if (!lieu) { showA("a0", "⚠️ Veuillez saisir le lieu."); return; }
-   if (!date) { showA("a0", "⚠️ Veuillez saisir la date."); return; }
-   S.actName = nom;
-   S.actLieu = lieu;
-   S.actDate = fmtDate(new Date(date));
-   S.actId   = "ACT-" + date.replace(/-/g,"") + "-" + nom.replace(/[^a-zA-Z0-9]/g,"").substring(0,6).toUpperCase();
- } else {
-   const a   = ACTIVITES[parseInt(val)];
-   S.actName = a.name;
-   S.actLieu = a.lieu;
-   S.actDate = fmtDate(new Date(a.date));
-   S.actId   = a.id;
- }
+  if (val === "autre") {
+    const nom  = document.getElementById("a_nom").value.trim();
+    const lieu = document.getElementById("a_lieu").value.trim();
+    const date = document.getElementById("a_date").value;
+    if (!nom)  { showA("a0", "⚠️ Veuillez saisir le nom de l'activité."); return; }
+    if (!lieu) { showA("a0", "⚠️ Veuillez saisir le lieu."); return; }
+    if (!date) { showA("a0", "⚠️ Veuillez saisir la date."); return; }
+    S.actName = nom;
+    S.actLieu = lieu;
+    S.actDate = fmtDate(new Date(date));
+    S.actId   = "ACT-" + date.replace(/-/g,"") + "-" + nom.replace(/[^a-zA-Z0-9]/g,"").substring(0,6).toUpperCase();
+  } else {
+    const a   = ACTIVITES[parseInt(val)];
+    S.actName = a.name;
+    S.actLieu = a.lieu;
+    S.actDate = fmtDate(new Date(a.date));
+    S.actId   = a.id;
+  }
 
- // Récap
- document.getElementById("arName").textContent = S.actName;
- document.getElementById("arMeta").textContent = "📍 " + S.actLieu + "   |   📅 " + S.actDate;
- document.getElementById("actRecap").classList.add("show");
- setStepper(1);
- showS("s1");
+  // Récap
+  document.getElementById("arName").textContent = S.actName;
+  document.getElementById("arMeta").textContent = "📍 " + S.actLieu + "   |   📅 " + S.actDate;
+  document.getElementById("actRecap").classList.add("show");
+  setStepper(1);
+  showS("s1");
 }
 
 function editActivity() {
- document.getElementById("actRecap").classList.remove("show");
- setStepper(0);
- showS("s0");
+  document.getElementById("actRecap").classList.remove("show");
+  setStepper(0);
+  showS("s0");
 }
 
 // ═══════════════════════════════════════════════════════════════
 // ÉTAPE 1 → VÉRIFIER CONTACT
 // ═══════════════════════════════════════════════════════════════
 function checkContact() {
- hideA("a1");
- const v = document.getElementById("contact").value.trim().toLowerCase();
- if (!v) { showA("a1","⚠️ Veuillez saisir votre email ou téléphone."); return; }
- S.contact = v;
- const db = getDB();
- const p  = Object.values(db).find(x => x.email?.toLowerCase()===v || x.tel===v);
- setStepper(2);
- if (p) {
-   if (hasAtt(p.uid, S.actId)) {
-     const t = attTime(p.uid, S.actId);
-     document.getElementById("ts_dup").textContent  = "Enregistré le " + fmt(t);
-     document.getElementById("act_dup").textContent = S.actName + " — " + S.actLieu;
-     showS("s5"); return;
-   }
-   document.getElementById("ex_name").textContent   = p.prenom + " " + p.nom;
-   document.getElementById("ex_detail").textContent = p.fn + " — " + p.str + "\n" + p.prov;
-   showS("s3");
- } else {
-   if (v.includes("@")) document.getElementById("n_email").value = v;
-   else document.getElementById("n_tel").value = v;
-   showS("s2");
- }
+  hideA("a1");
+  const v = document.getElementById("contact").value.trim().toLowerCase();
+  if (!v) { showA("a1","⚠️ Veuillez saisir votre email ou téléphone."); return; }
+  S.contact = v;
+  const db = getDB();
+  const p  = Object.values(db).find(x => x.email?.toLowerCase()===v || x.tel===v);
+  setStepper(2);
+  if (p) {
+    if (hasAtt(p.uid, S.actId)) {
+      const t = attTime(p.uid, S.actId);
+      document.getElementById("ts_dup").textContent  = "Enregistré le " + fmt(t);
+      document.getElementById("act_dup").textContent = S.actName + " — " + S.actLieu;
+      showS("s5"); return;
+    }
+    document.getElementById("ex_name").textContent   = p.prenom + " " + p.nom;
+    document.getElementById("ex_detail").textContent = p.fn + " — " + p.str + "\n" + p.prov;
+    showS("s3");
+  } else {
+    if (v.includes("@")) document.getElementById("n_email").value = v;
+    else document.getElementById("n_tel").value = v;
+    showS("s2");
+  }
 }
 
 // ═══════════════════════════════════════════════════════════════
 // ÉTAPE 2A → NOUVEAU PARTICIPANT
 // ═══════════════════════════════════════════════════════════════
-function submitNew() {
- hideA("a2");
- const f = {
-   nom:   document.getElementById("n_nom").value.trim(),
-   prenom:document.getElementById("n_pre").value.trim(),
-   str:   document.getElementById("n_str").value.trim(),
-   fn:    document.getElementById("n_fn").value.trim(),
-   prov:  document.getElementById("n_pv").value.trim(),
-   tel:   document.getElementById("n_tel").value.trim(),
-   email: document.getElementById("n_email").value.trim()
- };
- if (Object.values(f).some(v=>!v)) {
-   showA("a2","⚠️ Tous les champs obligatoires doivent être remplis."); return;
- }
- if (sigEmpty()) {
-   showA("a2","⚠️ Veuillez apposer votre signature électronique."); return;
- }
- const uid = "UID-" + Date.now().toString(36).toUpperCase();
- const sig = sigCanvas.toDataURL("image/png");
- saveP(f.email||f.tel, {...f, uid, sig, createdAt:new Date().toISOString()});
- saveA(uid, S.actId);
- const now = new Date();
- document.getElementById("ts_ok").textContent  = "Enregistré le " + fmt(now);
- document.getElementById("act_ok").textContent = "✅ " + S.actName + " — " + S.actLieu;
- document.getElementById("uid_ok").textContent = "Identifiant unique : " + uid;
- showS("s4");
+async function submitNew() {
+  hideA("a2");
+  const f = {
+    nom:   document.getElementById("n_nom").value.trim(),
+    prenom:document.getElementById("n_pre").value.trim(),
+    str:   document.getElementById("n_str").value.trim(),
+    fn:    document.getElementById("n_fn").value.trim(),
+    prov:  document.getElementById("n_pv").value.trim(),
+    tel:   document.getElementById("n_tel").value.trim(),
+    email: document.getElementById("n_email").value.trim()
+  };
+  if (Object.values(f).some(v=>!v)) {
+    showA("a2","⚠️ Tous les champs obligatoires doivent être remplis."); return;
+  }
+  if (sigEmpty()) {
+    showA("a2","⚠️ Veuillez apposer votre signature électronique."); return;
+  }
+
+  // Désactiver le bouton pendant l'envoi
+  const btn = document.querySelector("#s2 .btn-blue");
+  const txtOrig = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = "Envoi en cours...";
+
+  // Enregistrement local (anti-doublon)
+  const uid = "UID-" + Date.now().toString(36).toUpperCase();
+  const sig = sigCanvas.toDataURL("image/png");
+  saveP(f.email||f.tel, {...f, uid, sig, createdAt:new Date().toISOString()});
+  saveA(uid, S.actId);
+
+  // Envoi vers KoboToolbox
+  try {
+    const koboData = {
+      "grp_activite/nom_activite":  S.actName,
+      "grp_activite/lieu_activite": S.actLieu,
+      "grp_activite/date_debut":    new Date().toISOString().split("T")[0],
+      "grp_profil/nom":             f.nom,
+      "grp_profil/prenom":          f.prenom,
+      "grp_profil/structure":       f.str,
+      "grp_profil/fonction":        f.fn,
+      "grp_profil/provenance":      f.prov,
+      "grp_profil/telephone":       f.tel,
+      "grp_profil/email":           f.email,
+      "uid_participant":            uid
+    };
+    const resp = await fetch(
+      KOBO_SERVER + "/api/v2/assets/" + KOBO_UID_A + "/submissions/",
+      {
+        method: "POST",
+        headers: {
+          "Authorization": "Token " + KOBO_TOKEN,
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(koboData)
+      }
+    );
+    if (!resp.ok) {
+      console.warn("Kobo réponse:", resp.status, await resp.text());
+    }
+  } catch(err) {
+    console.warn("Envoi Kobo échoué (réseau):", err.message);
+    // Les données sont quand même sauvegardées localement
+  }
+
+  btn.disabled = false;
+  btn.textContent = txtOrig;
+
+  const now = new Date();
+  document.getElementById("ts_ok").textContent  = "Enregistré le " + fmt(now);
+  document.getElementById("act_ok").textContent = "✅ " + S.actName + " — " + S.actLieu;
+  document.getElementById("uid_ok").textContent = "Identifiant unique : " + uid;
+  showS("s4");
 }
 
 // ═══════════════════════════════════════════════════════════════
 // ÉTAPE 2B → PARTICIPANT EXISTANT
 // ═══════════════════════════════════════════════════════════════
 function submitExisting() {
- const db = getDB();
- const p  = Object.values(db).find(x => x.email?.toLowerCase()===S.contact || x.tel===S.contact);
- if (!p) return;
- if (hasAtt(p.uid, S.actId)) {
-   const t = attTime(p.uid, S.actId);
-   document.getElementById("ts_dup").textContent  = "Déjà enregistré le " + fmt(t);
-   document.getElementById("act_dup").textContent = S.actName;
-   showS("s5"); return;
- }
- saveA(p.uid, S.actId);
- const now = new Date();
- document.getElementById("ts_ok").textContent  = "Présence confirmée le " + fmt(now);
- document.getElementById("act_ok").textContent = "✅ " + S.actName + " — " + S.actLieu;
- document.getElementById("uid_ok").textContent = "Identifiant : " + p.uid;
- showS("s4");
+  const db = getDB();
+  const p  = Object.values(db).find(x => x.email?.toLowerCase()===S.contact || x.tel===S.contact);
+  if (!p) return;
+  if (hasAtt(p.uid, S.actId)) {
+    const t = attTime(p.uid, S.actId);
+    document.getElementById("ts_dup").textContent  = "Déjà enregistré le " + fmt(t);
+    document.getElementById("act_dup").textContent = S.actName;
+    showS("s5"); return;
+  }
+  saveA(p.uid, S.actId);
+  const now = new Date();
+  document.getElementById("ts_ok").textContent  = "Présence confirmée le " + fmt(now);
+  document.getElementById("act_ok").textContent = "✅ " + S.actName + " — " + S.actLieu;
+  document.getElementById("uid_ok").textContent = "Identifiant : " + p.uid;
+  showS("s4");
 }
 
 // ═══════════════════════════════════════════════════════════════
 // NAVIGATION & STEPPER
 // ═══════════════════════════════════════════════════════════════
 function goTo(step) {
- document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
- document.getElementById(["s0","s1","s2"][step]).classList.add("active");
- setStepper(step);
- if (step === 0) document.getElementById("actRecap").classList.remove("show");
+  document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
+  document.getElementById(["s0","s1","s2"][step]).classList.add("active");
+  setStepper(step);
+  if (step === 0) document.getElementById("actRecap").classList.remove("show");
 }
 function showS(id) {
- document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
- document.getElementById(id).classList.add("active");
+  document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
 }
 function setStepper(active) {
- [0,1,2].forEach(i => {
-   const el = document.getElementById("st"+i);
-   el.className = "st" + (i < active ? " done" : i === active ? " active" : "");
- });
+  [0,1,2].forEach(i => {
+    const el = document.getElementById("st"+i);
+    el.className = "st" + (i < active ? " done" : i === active ? " active" : "");
+  });
 }
 
 // ═══════════════════════════════════════════════════════════════
@@ -647,22 +681,21 @@ function hideA(id){ document.getElementById(id).classList.remove("show"); }
 // SIGNATURE PAD
 // ═══════════════════════════════════════════════════════════════
 function initSig(){
- sigCanvas = document.getElementById("sigCanvas");
- sigCtx    = sigCanvas.getContext("2d");
- const resize = ()=>{ sigCanvas.width=sigCanvas.offsetWidth||480; sigCanvas.height=114; };
- resize(); window.addEventListener("resize",resize);
- const pos = e=>{ const r=sigCanvas.getBoundingClientRect(); return {x:e.clientX-r.left,y:e.clientY-r.top}; };
- sigCanvas.addEventListener("mousedown",e=>{drawing=true;const p=pos(e);sigCtx.beginPath();sigCtx.moveTo(p.x,p.y)});
- sigCanvas.addEventListener("mousemove",e=>{if(!drawing)return;const p=pos(e);sigCtx.lineTo(p.x,p.y);sigCtx.strokeStyle="#1A6FA8";sigCtx.lineWidth=2;sigCtx.lineCap="round";sigCtx.stroke()});
- sigCanvas.addEventListener("mouseup",  ()=>drawing=false);
- sigCanvas.addEventListener("mouseleave",()=>drawing=false);
- sigCanvas.addEventListener("touchstart",e=>{e.preventDefault();drawing=true;const p=pos(e.touches[0]);sigCtx.beginPath();sigCtx.moveTo(p.x,p.y)},{passive:false});
- sigCanvas.addEventListener("touchmove", e=>{e.preventDefault();if(!drawing)return;const p=pos(e.touches[0]);sigCtx.lineTo(p.x,p.y);sigCtx.strokeStyle="#1A6FA8";sigCtx.lineWidth=2;sigCtx.lineCap="round";sigCtx.stroke()},{passive:false});
- sigCanvas.addEventListener("touchend",  ()=>drawing=false);
+  sigCanvas = document.getElementById("sigCanvas");
+  sigCtx    = sigCanvas.getContext("2d");
+  const resize = ()=>{ sigCanvas.width=sigCanvas.offsetWidth||480; sigCanvas.height=114; };
+  resize(); window.addEventListener("resize",resize);
+  const pos = e=>{ const r=sigCanvas.getBoundingClientRect(); return {x:e.clientX-r.left,y:e.clientY-r.top}; };
+  sigCanvas.addEventListener("mousedown",e=>{drawing=true;const p=pos(e);sigCtx.beginPath();sigCtx.moveTo(p.x,p.y)});
+  sigCanvas.addEventListener("mousemove",e=>{if(!drawing)return;const p=pos(e);sigCtx.lineTo(p.x,p.y);sigCtx.strokeStyle="#1A6FA8";sigCtx.lineWidth=2;sigCtx.lineCap="round";sigCtx.stroke()});
+  sigCanvas.addEventListener("mouseup",  ()=>drawing=false);
+  sigCanvas.addEventListener("mouseleave",()=>drawing=false);
+  sigCanvas.addEventListener("touchstart",e=>{e.preventDefault();drawing=true;const p=pos(e.touches[0]);sigCtx.beginPath();sigCtx.moveTo(p.x,p.y)},{passive:false});
+  sigCanvas.addEventListener("touchmove", e=>{e.preventDefault();if(!drawing)return;const p=pos(e.touches[0]);sigCtx.lineTo(p.x,p.y);sigCtx.strokeStyle="#1A6FA8";sigCtx.lineWidth=2;sigCtx.lineCap="round";sigCtx.stroke()},{passive:false});
+  sigCanvas.addEventListener("touchend",  ()=>drawing=false);
 }
 function clearSig(){ sigCtx.clearRect(0,0,sigCanvas.width,sigCanvas.height); }
 function sigEmpty(){ return !sigCtx.getImageData(0,0,sigCanvas.width,sigCanvas.height).data.some(v=>v!==0); }
 </script>
-
 </body>
 </html>
